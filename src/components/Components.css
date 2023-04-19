@@ -1,0 +1,39 @@
+
+.Main-buttons {
+  width: 100;
+  height: 100;
+  background-color: brown;
+}
+
+.Meeting {
+  flex: 1;
+  background-color: rgb(97, 42, 165);
+}
+
+.Main-Meeting {
+  display: flex;
+  flex-direction: row;
+}
+
+.all-Particpants {
+  flex-grow: 1;
+  flex-direction: row;
+  width: 100vw;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.Particpnt {
+  width: 30vw;
+  height: 30vh;
+  background-color: aqua;
+  /* background-image: url('../judge.jpg'); */
+}
+
+.Side-bar {
+  background-color: #6c778d;
+  min-height: 100vh;
+  min-width: 10vh;
+  align-self: flex-start;
+}

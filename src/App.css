@@ -1,0 +1,11 @@
+.App {
+  text-align: center;
+}
+
+
+
+.Main-page {
+  background-color: #6282c2;
+  flex-grow: 1;
+  min-height: 100vh;
+}
