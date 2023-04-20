@@ -14,7 +14,9 @@ export const MainButton = ({isJoin, setMeetingNumber}) => {
             } else{
                 createMeeting(value).then(meetingNum => {
                     setMeetingNumber(meetingNum);
-                })
+                }).catch(error => {
+                    console.log(`Failed creating meeting ` + error.message);
+                });
             }
         }
     }

@@ -9,7 +9,9 @@ export const Meeting = ({meetingNumber}) => {
     useEffect(() => {
         getMeetingDetails(meetingNumber).then(meetingDetails => {
             setMeetingDetails(meetingDetails)
-        })
+        }).catch(error => {
+            console.log(`Failed fetching meeting details ` + error.message);
+        });
         // setMeetingDetails({file_number: '47-64-464', file_subject: 'case josef', particpnts: [{name: 'ghgh', role: 'JUDGE', muted: false, isAdmin: true, id: 5}, {name: 'GDJS', role: 'DEFENDAT', muted: true, isAdmin: false, id: 6}]})
     }, [meetingNumber]);
     

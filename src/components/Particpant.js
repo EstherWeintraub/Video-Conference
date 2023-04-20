@@ -15,14 +15,18 @@ export const Particpant = ({name, role, muted, isAdmin, meetingNumber, id}) => {
                 if(isAdmin) {
                     setCanMuteAll(false);
                 }
-            })
+            }).catch(error => {
+                console.log(`Failed to `+ muted? 'unmute' : 'mute' + error.message);
+            });
         }
     }
 
     const muteAll = () => {
         setActions({meetingId: meetingNumber, actionType: 'mute_all', participantId: id}).then(sucsess => {
             setCanMuteAll(false);
-        })
+        }).catch(error => {
+            console.log(`Failed to mute all participants ` + error.message);
+        });
     }
     
     return (
