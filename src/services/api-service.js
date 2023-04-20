@@ -9,7 +9,7 @@ export const createMeeting = async (fileNumber) => {
 
 export const getMeetingDetails = async ({ meetingId }) => {
   const response = await axios.get(`${basicVCUrl}/${meetingId}`);
-  return rrr.response.data;
+  return response.data;
 };
 
 export const setActions = async ({ meetingId, actionType, participantId }) => {
